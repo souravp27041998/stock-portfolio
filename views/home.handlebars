@@ -1,0 +1,22 @@
+<div class="card" style="width: 25rem;">
+  <div class="card-body" >
+    {{#if stock}}
+    <div style="background-color:aqua;">
+    <h5 class="card-title">{{stock.companyName}} {{stock.symbol}}</h5>
+    <p class="card-text">
+        CURRENCY : {{stock.currency}}<br>
+        CURRENT PRICE : {{stock.latestPrice}}<br>
+        52 WEEK HIGH  : {{stock.week52High}}<br>
+        52 WEEK LOW   : {{stock.week52Low}}<br>
+        PE RATIO : {{stock.peRatio}}<br>
+        YTD CHANGE : {{stock.ytdChange}}
+    </p>
+    </div>
+    {{else}}
+    <div style="background-color : red;">
+     <h5 class="card-title">Not Able To Get Any Data For Specified Stock</h5>
+     </div>
+     {{/if}}
+  </div>
+</div>
+    
